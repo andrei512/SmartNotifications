@@ -10,8 +10,8 @@ Posting a notification:
 
 ```objective-c
 post(@"NotificationName");
-//or post with object
-post(@"NotificationName", object);
+//or post with object 
+posto(@"NotificationName", object);
 ```
 
 Observing notifications:
