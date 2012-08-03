@@ -1,7 +1,7 @@
 SmartNotifications
 ==================
 
-c wrapper for NSNotifications
+C wrapper for NSNotifications
 
 Usage
 =====
