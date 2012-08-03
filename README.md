@@ -42,3 +42,32 @@ when(@"NotificationName", ^{
   // this will not be executed  
 });
 ```
+
+Multiple events:
+
+```objective-c
+  when(@"a & b", ^{
+      NSLog(@"when a & b");
+  });
+    
+  once(@"a | b", ^{
+      NSLog(@"once a | b");
+  });
+    
+    
+  when(@"a", ^{
+      NSLog(@"when a");
+  });
+    
+  post(@"a"); // will trigger @"a | b" and @"a"
+  post(@"a"); // will trigger @"a"
+  
+  once(@"b", ^{
+      NSLog(@"once b");
+  });
+  
+  post(@"b"); // will trigger @"a & b" and @"b"
+  post(@"b"); // nothing happens   
+```
+
+
