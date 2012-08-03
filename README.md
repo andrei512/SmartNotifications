@@ -31,3 +31,14 @@ just(k, @"NotificationName", ^{
   // do stuff here
 });
 ```
+
+Invalidating a block:
+
+```objective-c
+//use the stop to invalidate the current scope and all subscopes
+when(@"NotificationName", ^{
+  // do stuff here
+  stop    
+  // this will not be executed  
+});
+```
